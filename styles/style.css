@@ -1,0 +1,395 @@
+/*! style.css | Documentación */
+
+/* Documentación
+   ========================================================================== */
+/* ========================================================================== */
+
+/* Índice
+   ========================================================================== */
+/**
+ * 1. Root.
+ * 2. Formateo Texto.
+ * 3. Etiquetas.
+ * 4. Auxiliares.
+ * 5. Clases.
+ * 6. Id.
+ */
+/* ======================== */
+/* ======================== */
+
+/* 1. Root.
+  ========================================================================== */
+:root {
+  /* DarkMode */
+  --color-fuente-dark: #b8b8b8;
+  --color-primario-dark: #052051;
+  --color-secundario-dark: #6717bd;
+  --color-textarea-dark: #0A3871;
+  --color-text-missing: #757FB2;
+
+  /* LightMode */
+  --color-fuente-light: black;
+  --color-primario-light: #E9ECF8;
+  --color-secundario-light: #0A3871;
+
+  /* Fuentes */
+  --fuente-primaria: "Rubik", sans-serif;
+  --fuente-secundaria: "Lato", sans-serif;
+
+  --white: #FFF;
+  --light-blue-100: #F3F5FC;
+  --light-blue-200: #EFF1FA;
+  --light-blue-300: #E9ECF8;
+  --light-blue-400: #AAB2D5;
+  --light-blue-500: #757FB2;
+  --dark-blue-100: #609ED4;
+  --dark-blue-200: #356EA9;
+  --dark-blue-300: #0A3871;
+  --dark-blue-400: #072B61;
+  --dark-blue-500: #052051;
+  --gray-100: #CED4DA;
+  --gray-200: #ADB5BD;
+  --gray-300: #868E96;
+  --gray-400: #495057;
+  --gray-500: #343A40;
+}
+
+/* 2. Formateo Texto.
+  ========================================================================== */
+/* 2.1. Font-Size 10px - 1rem. */
+html{
+  font-size: 62,5%;
+}
+
+/* 2.2. Margenes texto a 0 */
+h1, h2, p {
+  margin: 0;
+}
+
+/* 2.3. Detalle */
+h1 {
+  font-family: var(--fuente-primaria);
+  font-size: 1.4rem;
+  text-align: left;
+  color: var(--color-secundario-light);
+}
+h2 {
+  font-family: var(--fuente-secundaria);
+  color: #343A40;
+}
+p {
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  color: #0A3871;
+}
+
+/* 3. Etiquetas
+  ========================================================================== */
+body {
+  color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-primario-light);
+}
+
+nav {
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--color-secundario-light);
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+footer img {
+  height: 1.2rem;
+}
+
+footer p {
+  color: white;
+  font-weight: 800;
+  font-size: 0.6rem;
+}
+
+footer span {
+  color: white;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--fuente-primaria);
+}
+
+textarea {
+  resize: none;
+  display: block;
+  height: 250px;
+  width:  336px;
+  border: none;
+  background-color: var(--color-primario-light);
+  border-radius: 8px;
+  font-family: var(--fuente-secundaria);
+  color:var(--color-text-missing); 
+  font-size: 1.6rem;
+  outline-color: var(--color-secundario-light);
+}
+
+textarea:active {
+  outline: none;}
+
+textarea:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--color-text-missing);
+  font-size: 1.6rem;
+}
+
+input {
+  background-color: #2e7281;
+  width: 100%;
+  border-radius: 32px;
+  font-family: var(--fuente-secundaria);
+  border: 1px solid red;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.7rem;
+  font-family: var(--fuente-secundaria);
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid var(--color-secundario-light);
+}
+
+button:hover {
+  background-color: var(--color-secundario-light);
+  color: white;
+}
+
+/* 4. Auxiliares
+  ========================================================================== */
+.display-none {
+  display: none!important;
+}
+
+.shadow-none {
+  box-shadow: initial!important;
+}
+
+.darkModeTitle {
+  color: var(--white);
+}
+
+.darkModeBody {
+  background-color: var(--color-primario-dark);
+  color: var(--white);
+}
+
+.darkModeTextarea {
+  background-color: var(--color-primario-dark);
+
+}
+
+.darkModeButtonHover:hover {
+  background-color: var(--color-secundario-dark);
+  color: white;
+}
+
+.darkModeRespuesta {
+  background-color: var(--color-textarea-dark)!important;
+  
+}
+/* ======== */
+
+/* 5. Clases 
+  ========================================================================== */
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+}
+/* clases consulta */
+.contenedor__consulta {
+  display: flex;
+  align-content: center;
+}
+
+.contenedor__consulta section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.contenedor__consulta form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contenedor__consulta--botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.contenedor__consulta--accion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.caution {
+  display: flex;
+  align-items: self-start;
+  gap: 0.6rem;
+}
+
+.caution p {
+  color: #5c5c5c;
+}
+
+/* clases respuesta  */
+.contenedor__respuesta {
+  box-shadow: 0px 24px 32px -8px #cbcbcb;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.contenedor__respuesta img {
+  width: 250px;
+  align-self: center;
+}
+
+.contenedor__respuesta--bloque {
+  width: 342px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__lenguajes div{
+  display: flex;
+  align-items: center;
+}
+
+.nav__titulo {
+  display: flex;
+  gap: 10px;
+}
+
+/* 6. Id 
+  ========================================================================== */
+#darkMode {
+  color: var(--color-secundario-light);
+}
+
+#bloqueResultado h2 {
+  color: var(--color-text-missing);
+  margin: 30px 55px 0 55px;
+}
+
+#bloqueResultado p {
+  color: var(--color-text-missing);
+  margin: 0 67px 30px 67px;
+}
+
+#cuadroRespuesta {
+  width: 336px;
+  margin-bottom: 30px;
+  padding-top: 20px;
+  display: inline-table;
+}
+
+#cuadroRespuesta p {
+  color: #495057;
+  margin: 20px;
+  font-size: 1.6rem;
+  font-family: var(--fuente-secundaria);
+}
+
+#botonCopiar {
+  width: 80%;
+  align-self: center;
+  border-radius: 32px;
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  padding: 24px;
+  margin-bottom: 30px;
+  border: 1px solid var(--color-secundario-light);
+  background-color: white;
+  color: var(--color-secundario-light);
+}
+
+#botonCopiar:hover {
+  color: white;
+  background-color: var(--color-secundario-light);
+}
+
+#botonReset {
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+
+#botonReset:hover {
+  background-color: red;
+}
+
+#encriptarTexto {
+  background-color: var(--color-secundario-light);
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#encriptarTexto:hover {
+  background-color: var(--color-primario-light);
+  color: var(--color-secundario-light);
+}
+
+#desencriptarTexto {
+  background-color: var(--color-primario-light);
+  color: var(--color-secundario-light);
+  width: 100%;
+}
+
+#desencriptarTexto:hover {
+  background-color: var(--color-secundario-light);
+  color: white;
+}
+/* ======== */

@@ -1,0 +1,14 @@
+/*! style1-tablet.css | Documentación */
+textarea {
+  width:  480px;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+/* Cambio dirección botones */
+.contenedor__consulta--botones {
+  flex-direction: row;
+}
+

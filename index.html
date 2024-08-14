@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style1-tablet.css" media="(min-width: 600px)">
+    <link rel="stylesheet" href="./styles/style2-desktop.css" media="(min-width: 1100px)">
+		<link rel="icon" href="./assets/icons/favicon.ico" />
+
+    <title>Encriptador de Texto</title>
+	</head>
+	<body>
+    <header>
+      <nav>
+        <div class="nav__titulo" id="titulo">
+          <img id="logoAluraNormal" src="./assets/icons/logoAlura_normal.svg" alt="Logo Alura">
+          <img id="logoAluraDark" class="display-none" src="./assets/icons/logoAlura_blanco.svg" alt="Logo Alura dark mode">
+          <h1 id="lightModeTitulo">Encriptador de texto </h1>
+        </div>
+        <div>
+          <span title="LightMode" id="lightMode" onclick="lightMode()" class="material-symbols-outlined display-none">
+            light_mode
+          </span>
+          <span title="DarkMode" id="darkMode" onclick="darkMode()" class="material-symbols-outlined">
+            nightlight
+          </span>
+        </div>
+      </nav>
+    </header>
+
+		<main class="contenedor">
+      <div class="contenedor__consulta">
+        <section class=""> 
+            
+            <textarea required id="textoUsuario" type="text" placeholder="Ingrese el texto aquí..."></textarea>
+
+            <div class="contenedor__consulta--accion">
+              <div class="caution">
+                <img src="./assets/icons/caution_icon.svg" alt="">
+                <p>
+                  Solo letras minúsculas y sin acentos
+                </p>
+              </div>
+    
+              <div class="contenedor__consulta--botones">
+                <button type="submit" id="encriptarTexto" onclick="encriptarTextoUsuario()">
+                  <span class="material-symbols-outlined">
+                    lock
+                    </span>
+                    <span>
+                      Encriptar
+                    </span>
+                </button>
+                <button id="desencriptarTexto" onclick="desencriptarTextoUsuario()">
+                  <span class="material-symbols-outlined">
+                    lock_open_right
+                    </span>
+                  Desencriptar</button>
+              </div>
+            </div>
+
+        </section>
+      </div>
+
+      <div class="contenedor__respuesta">
+        <section id="bloqueResultado" class="contenedor__respuesta--bloque">
+          <img id="imagen" class="display-none" src="./assets/imgs/sin-mensaje.webp" alt="">
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </section>
+        <section id="cuadroRespuesta" class="display-none">
+        </section>
+        <button id="botonCopiar" onclick="botonCopiar()" class="display-none">
+          <span class="material-symbols-outlined">
+            content_copy
+          </span>
+          Copiar
+        </button>
+      </div>
+
+		</main>
+
+    <footer>
+      <section class="footer__fecha">
+        <div class="">
+          <img title="Chile" src="./assets/imgs/chile.png" alt="Bandera Chile">
+          <img title="Dinosaurio" src="./assets/imgs/diplodocus.png" alt="Dinosaurio">
+        </div>
+        <p title="Fecha hoy" id="fecha"></p>
+      </section>
+    
+      <section class="footer__lenguajes">
+        <p>Desarrollado con:</p>
+        <div>
+          <span class="material-symbols-outlined">
+            html
+          </span>
+          <img src="./assets/imgs/html.png" alt="">
+          <span class="material-symbols-outlined">
+            css
+          </span>
+          <img src="./assets/imgs/css.png" alt="">
+          <span title="JavaScript" class="material-symbols-outlined">
+            javascript
+          </span>
+          <img title="JavaScript" src="./assets/imgs/javascript.png" alt="">
+        </div>
+      </section>
+    </footer>
+
+    <script src="app.js"></script>
+	</body>
+</html>
+          

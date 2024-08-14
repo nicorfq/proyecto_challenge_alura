@@ -1,0 +1,45 @@
+/*! style2-desktop.css | Documentación */
+main {
+  height: 100%;
+}
+
+.contenedor {
+  flex-direction: row;
+  align-items: initial;
+  justify-content: space-around;
+}
+
+/* Tamaño imagen */
+footer img {
+  height: 1.9rem;
+}
+
+footer p {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.contenedor__consulta {
+  justify-content: space-around;
+}
+
+.contenedor__respuesta {
+  justify-content: space-around;
+}
+
+.contenedor__respuesta img {
+  width: 220px;
+}
+
+.contenedor__respuesta_bloque {
+  width: 346px;
+  align-items: center;
+}
+
+#imagen {
+  display: initial!important;
+}
+
+#cuadroRespuesta {
+  width: 346px;
+}
