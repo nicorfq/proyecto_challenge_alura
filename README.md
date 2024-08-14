@@ -42,9 +42,9 @@ Su función es ser una web app con capacidad de encriptar y desencriptar un text
 Fue construída con diseño adaptativo o **responsive design** que le permite presentarse desde un sitio web para diferentes tamaños de pantalla. Se utilizó la técnica de cambiar de resolución de pantalla desde la etiqueta *head* en el archivo `index.html`, generando un archivo CSS individual para cada resolución (**Mobile**, **Tablet** y **Desktop**) y así aumentar la velocidad de carga del sitio web, junto con una base de Normalize-css para mantener los estilos similares en los navegadores, ya que cada uno agrega sus propios estilos por defecto. 
 Las resoluciones son las siguientes:
 
-* **Mobile:** 0 - 480px. `style.css`
-* **Tablets:** 481px - 767px. `style1-tablet.css`
-* **Desktop:** 1024px. `style2-desktop.css`
+* **Mobile:** 0 - 599px. `style.css`
+* **Tablets:** 600px - 1099px. `style1-tablet.css`
+* **Desktop:** 1100px. `style2-desktop.css`
 
 <h5>Etiqueta head</h5>
 
